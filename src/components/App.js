@@ -2,13 +2,15 @@
 import React from 'react';
 import Header from './Header';
 import PostList from './PostList';
+import Mynavbar from './Mynavbar';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
+      <Mynavbar/>
       <PostList />
-    </div>
+    </>
   );
 };
 
