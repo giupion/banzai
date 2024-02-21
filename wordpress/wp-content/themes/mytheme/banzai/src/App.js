@@ -25,7 +25,7 @@ const App = () => {
 
     fetchCategories();
   }, []);
-
+//fa il fetch al variare di selectedcategory nell ostato
   useEffect(() => {
     const fetchPosts = async () => {
       try {
