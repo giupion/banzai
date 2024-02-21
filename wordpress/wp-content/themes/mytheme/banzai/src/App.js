@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Post from './components/Post';
+import Navbar from './components/Navbar';
 import './App.css';
-import "@fontsource/east-sea-dokdo";
+
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -47,6 +49,7 @@ const App = () => {
 
   return (
     <Container>
+      <Navbar/>
       <h1>Banzai!</h1>
       <div>
         <strong>Seleziona una categoria:</strong>
@@ -58,7 +61,7 @@ const App = () => {
             </option>
           ))}
         </select>
-        <Button variant="primary" onClick={() => handleCategoryChange('')}>
+        <Button variant="danger" size="sm" onClick={() => handleCategoryChange('')}>
           Reset Filtri
         </Button>
       </div>
