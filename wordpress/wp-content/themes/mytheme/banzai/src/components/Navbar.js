@@ -19,7 +19,7 @@ const NavBar = () => {
             <Nav.Link  className="text-white fs-3" href="#home">Home</Nav.Link>
             <Nav.Link className="text-white fs-3" href="#about">Articoli</Nav.Link>
             <Nav.Link className="text-white fs-3" href="#services">Utenti</Nav.Link>
-            <Nav.Link className="text-white fs-3" href="#contact"></Nav.Link>
+            <Nav.Link className="text-white fs-3" href="#contact">Categorie</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
