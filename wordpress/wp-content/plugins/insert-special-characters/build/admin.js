@@ -1,0 +1,1 @@
+!function(e){const t=jQuery("#isc_reset_palette");t.on("click",(function(){localStorage.removeItem("dayjoReactCharPalette");const e=t.text();t.text(tenupIscAdminVars.palette_deleted_message),setTimeout((()=>{t.text(e)}),2e3)}))}();

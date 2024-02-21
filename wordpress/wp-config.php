@@ -94,3 +94,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Imposta le variabili di WordPress ed include i file. */
 require_once ABSPATH . 'wp-settings.php';
+
+
