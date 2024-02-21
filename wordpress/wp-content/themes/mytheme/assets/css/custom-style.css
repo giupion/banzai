@@ -1,0 +1,85 @@
+
+#navbar-custom {
+    background-image: url('/wordpress/wp-content/themes/mytheme/images.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h2{text-decoration: none;
+    color: #f10909 ;
+    font-size: 900 ;
+}
+
+p{text-decoration: none;
+    color: #090909 ;
+    font-size: larger ;
+}
+
+.fs-5 {
+    font-size: 900 ;
+  }
+
+body {
+    
+    background: linear-gradient(to bottom, rgb(255, 13, 5), rgb(225, 224, 224), rgb(255, 6, 6), rgb(225, 224, 224)),rgb(234, 5, 5);
+  }
+
+
+  
+
+  .navbar a { background: linear-gradient(to right, rgb(246, 2, 2), rgb(252, 4, 4));
+    -webkit-background-clip: text; /* WebKit/Blink browsers */
+    background-clip: text;
+    color: transparent; /* Rende il testo trasparente per mostrare il gradiente di sotto */
+    text-decoration: none;}
+
+
+a{text-decoration: none;
+    font-size: larger ;}
+
+.col-4 a{color:black;
+    font-size: larger ;}
+
+.col-4 h2{color: #090909 ;;
+    }
+
+
+
+ul{padding: 0;}
+
+  li{list-style-type: none ;}
+
+
+  .dropdown-menu {
+    list-style-type: none ; /* Rimuove i pallini dalla lista */
+}
+  
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  #app {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  p {
+    margin-top: 10px;
+    color: #666;
+  }
