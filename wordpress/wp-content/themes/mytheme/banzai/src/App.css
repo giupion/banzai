@@ -18,9 +18,10 @@
 .card{background: linear-gradient(to bottom, rgb(255, 13, 5), rgb(225, 224, 224), rgb(255, 6, 6), rgb(225, 224, 224)),rgb(234, 5, 5) !important;
     border-radius:10px ;}
 
-    *,html,body,select {
+    *,html,body {
         font-family: "East Sea Dokdo", sans-serif !important;
         font-weight:900 !important;
+        
         font-style: normal !important;
       }
 
@@ -28,12 +29,17 @@
 
 
 body {
-        background-image: url('./components/screenshot.png'); /* Imposta il percorso corretto dell'immagine */
-        background-size: cover; /* Opzionale: regola la dimensione dell'immagine per coprire l'intero elemento */
-        /* Altri stili CSS desiderati per il tuo componente */
+        background-image: url('./components/screenshot.png'); 
+        background-size: cover; 
+        background-repeat: repeat;
+      
       }
 
       
       
 h1{
 color: white !important;}
+
+p{font-size:larger!important;}
+
+.card-title{font-size:larger!important;}
