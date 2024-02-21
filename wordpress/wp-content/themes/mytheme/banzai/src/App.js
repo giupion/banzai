@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Post from './components/Post';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -51,6 +52,7 @@ const App = () => {
     <Container>
       <Navbar/>
       <h1 >Banzai!</h1>
+      <h2>Alla scoperta del Giappone, scegli una categoria e leggi l'articolo dei nostri migliori Blog!  </h2>
       <div>
         <h1>Seleziona una categoria:</h1>
         <select onChange={(e) => handleCategoryChange(e.target.value)} value={selectedCategory}>
@@ -72,6 +74,7 @@ const App = () => {
           </Col>
         ))}
       </Row>
+      <Footer/>
     </Container>
   );
 };

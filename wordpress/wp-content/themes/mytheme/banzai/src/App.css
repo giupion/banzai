@@ -38,8 +38,9 @@ body {
 
       
       
-h1{
-color: white !important;}
+h1,h2{
+color: white !important;
+font-size: larger;}
 
 p{font-size:larger!important;}
 
