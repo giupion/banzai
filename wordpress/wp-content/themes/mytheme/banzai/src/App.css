@@ -9,7 +9,8 @@
     padding: 10px;
     margin: 10px;
   }
-  .card-title{color:rgb(11, 10, 10);}
+  .card-title{font-size:26px !important;
+    color:rgb(11, 10, 10);}
 
   
   
@@ -42,4 +43,3 @@ color: white !important;}
 
 p{font-size:larger!important;}
 
-.card-title{font-size:larger!important;}
