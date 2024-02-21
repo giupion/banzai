@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
-const PostCard = ({ title, content }) => (
-  <div className="post-card">
-    <h2>{title}</h2>
-    <div dangerouslySetInnerHTML={{ __html: content }} />
-  </div>
-);
+import {  Container, Row, Col } from 'react-bootstrap';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Post from './components/Post'; 
+import './App.css';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -26,14 +23,16 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <Container >
       <h1>Banzai!</h1>
-      <div className="post-container">
+      <Row>
         {posts.map(post => (
-          <PostCard key={post.id} title={post.title.rendered} content={post.content.rendered} />
+          <Col key={post.id} xs={12} md={6} lg={4}>
+            <Post title={post.title.rendered} content={post.content.rendered} />
+          </Col>
         ))}
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 };
 

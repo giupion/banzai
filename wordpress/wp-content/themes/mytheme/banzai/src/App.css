@@ -9,3 +9,8 @@
     padding: 10px;
     margin: 10px;
   }
+  .card-title{color:red!important;}
+
+  
+  
+.container{background: linear-gradient(to bottom, rgb(255, 13, 5), rgb(225, 224, 224), rgb(255, 6, 6), rgb(225, 224, 224)),rgb(234, 5, 5) !important;}

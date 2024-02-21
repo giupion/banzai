@@ -1,10 +1,13 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 
 const Post = ({ title, content }) => (
-  <div>
-    <h2>{title}</h2>
-    <div dangerouslySetInnerHTML={{ __html: content }} />
-  </div>
+  <Card >
+    <Card.Body>
+      <Card.Title>{title}</Card.Title>
+      <Card.Text dangerouslySetInnerHTML={{ __html: content }} />
+    </Card.Body>
+  </Card>
 );
 
 export default Post;
