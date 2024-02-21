@@ -83,3 +83,13 @@ function custom_rest_user_query( $prepared_args, $request = null ) {
   unset($prepared_args['has_published_posts']);
   return $prepared_args;
 }
+
+
+function enqueue_react_scripts() {
+    wp_enqueue_script('react', 'https://unpkg.com/react@18/umd/react.development.js', array(), null, true);
+    wp_enqueue_script('react-dom', 'https://unpkg.com/react-dom@18/umd/react-dom.development.js', array('react'), null, true);
+    // Enqueue your custom scripts here
+    wp_enqueue_script('custom-script', get_template_directory_uri() . './banzai/src/index.js', array('react-dom'), null, true);
+    wp_enqueue_script('banzai', get_template_directory_uri() . './banzai/src/components/Footer.js', array('custom-script'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_react_scripts');

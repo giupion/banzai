@@ -18,7 +18,11 @@
 
 </div>
 <div id="root"></div>
-
+<script src="./assets/js/custom-script.js" defer></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin defer></script> 
+     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" defer crossorigin></script>
+  <!-- Load our React component. -->
+  <script src="./banzai/src/index.js"></script>
 
     <div class="container ">
   <div class="row">
@@ -34,7 +38,6 @@
 <h1>Lista Utenti</h1>
 <div id="app"></div>
 
-    <script src="./assets/js/custom-script.js"></script>
    
 
     <?php get_footer();?>
