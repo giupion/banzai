@@ -50,9 +50,9 @@ const App = () => {
   return (
     <Container>
       <Navbar/>
-      <h1>Banzai!</h1>
+      <h1 >Banzai!</h1>
       <div>
-        <strong>Seleziona una categoria:</strong>
+        <h1>Seleziona una categoria:</h1>
         <select onChange={(e) => handleCategoryChange(e.target.value)} value={selectedCategory}>
           <option value="">Tutte le categorie</option>
           {categories.map((category) => (
