@@ -1,32 +1,69 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {  Container, Row, Col } from 'react-bootstrap';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Post from './components/Post'; 
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import Post from './components/Post';
 import './App.css';
+import "@fontsource/east-sea-dokdo";
 
 const App = () => {
   const [posts, setPosts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get('http://localhost/progettoreactwordpress/wordpress/wp-json/wp/v2/categories');
+        setCategories(response.data);
+      } catch (error) {
+        console.error('Errore nel recupero delle categorie:', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost/progettoreactwordpress/wordpress/wp-json/wp/v2/posts');
+        const response = await axios.get('http://localhost/progettoreactwordpress/wordpress/wp-json/wp/v2/posts', {
+          params: {
+            categories: selectedCategory,
+          },
+        });
         setPosts(response.data);
-        console.log(response.data);
+        console.log(response.data)
       } catch (error) {
         console.error('Errore nel recupero dei post:', error);
       }
     };
 
     fetchPosts();
-  }, []);
+  }, [selectedCategory]);
+
+  const handleCategoryChange = (categoryId) => {
+    setSelectedCategory(categoryId);
+  };
 
   return (
-    <Container >
+    <Container>
       <h1>Banzai!</h1>
+      <div>
+        <strong>Seleziona una categoria:</strong>
+        <select onChange={(e) => handleCategoryChange(e.target.value)} value={selectedCategory}>
+          <option value="">Tutte le categorie</option>
+          {categories.map((category) => (
+            <option key={category.id} value={category.id}>
+              {category.name}
+            </option>
+          ))}
+        </select>
+        <Button variant="primary" onClick={() => handleCategoryChange('')}>
+          Reset Filtri
+        </Button>
+      </div>
       <Row>
-        {posts.map(post => (
+        {posts.map((post) => (
           <Col key={post.id} xs={12} md={6} lg={4}>
             <Post title={post.title.rendered} content={post.content.rendered} />
           </Col>
