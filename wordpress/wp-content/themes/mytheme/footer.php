@@ -1,3 +1,3 @@
-<?php wp_footer(); ?> <!-- Include this line for WordPress to inject necessary scripts -->
+<?php wp_footer(); ?> 
 </body>
 </html>

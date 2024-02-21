@@ -33,5 +33,6 @@
 </div>
 <h1>Lista Utenti</h1>
 <div id="app"></div>
+<div id="root"></div>
     <script src="./assets/js/custom-script.js"></script>
     <?php get_footer();?>
